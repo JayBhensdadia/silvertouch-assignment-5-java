@@ -1,0 +1,24 @@
+package loops.p8;
+
+public class Main {
+
+    public static int[] reverseArray(int[] arr){
+        int[] ans = new int[arr.length];
+        for (int i = 0; i < arr.length; i++) {
+            ans[arr.length-i-1] = arr[i];
+        }
+
+        return ans;
+    }
+
+    public static void printArray(int[] arr){
+        for(int i = 0; i < arr.length; i++){
+            System.out.print(arr[i]+", ");
+        }
+        System.out.println();
+    }
+    public static void main(String[] args) {
+        int[] arr = {1,2,3,4};
+        printArray(reverseArray(arr));
+    }
+}
